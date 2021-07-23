@@ -9,6 +9,8 @@ def canUnlockAll(boxes):
         return:
             true or false depending if all boxes are oppened or not
     '''
+    if len(boxes) == 0:
+        return False
     open_boxes = set()
     keys = set()
     if len(boxes[0]) == 0 and len(boxes) > 1:
