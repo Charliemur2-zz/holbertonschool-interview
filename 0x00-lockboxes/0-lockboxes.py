@@ -9,17 +9,13 @@ def canUnlockAll(boxes):
         return:
             true or false depending if all boxes are oppened or not
     '''
-    if len(boxes) == 0:
-        return False
-    open_boxes = set()
-    keys = set()
-    if len(boxes[0]) == 0 and len(boxes) > 1:
-        return False
-    for i in range(len(boxes)):
-        for j in range(len(boxes[i])):
-            open_boxes.add(i)
-            keys.add(boxes[i][j])
-    if len(keys) == len(open_boxes):
-        return True
-    else:
-        return False
+    keyPocket = {0}
+    for box in range(0, len(boxes)):
+        if box in keyPocket:
+            keyPocket.update(boxes[box])
+            for key in boxes[box]:
+                if key < len(boxes):
+                    keyPocket.update(boxes[key])
+        else:
+            return False
+    return True
