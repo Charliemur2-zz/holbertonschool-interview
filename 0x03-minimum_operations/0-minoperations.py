@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-method that calculates the fewest number of operations needed to result in exactly n H characters in the file.
+method that calculates the fewest number of operations needed to
+result in exactly n H characters in the file.
 args:
   n: number of times that the letter repeats
 """
@@ -19,4 +20,3 @@ def minOperations(n):
                 n = n / i
                 letters.append(i)
     return sum(letters)
-    
