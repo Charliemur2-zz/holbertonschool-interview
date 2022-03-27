@@ -91,4 +91,3 @@ if __name__ == "__main__":
 
     board = [[0 for i in range(n)] for j in range(n)]
     solveNQUtil(board, 0, n)
-    
