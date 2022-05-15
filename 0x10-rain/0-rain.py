@@ -33,4 +33,3 @@ def rain(walls):
         water += min(left[i], right[i]) - walls[i]
 
     return water
-    
